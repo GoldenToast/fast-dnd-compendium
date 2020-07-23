@@ -33,7 +33,7 @@
         },
         methods: {
             get(thing) {
-                return axios.get('api/'+thing)
+                return axios.get(thing)
                     .then(response => {
                         this.item = response.data;
                     }).catch(error => {
@@ -44,7 +44,7 @@
             },
         },
         mounted() {
-            this.get("/api/monsters/" + this.$route.params.name);
+            this.get("lib/api/monsters/" + this.$route.params.name);
         }
     }
 </script>

@@ -28,7 +28,7 @@
         },
         methods: {
             get(thing) {
-                return axios.get('api/'+thing)
+                return axios.get(thing)
                     .then(response => {
                         this.item = response.data;
                     }).catch(error => {
@@ -39,7 +39,7 @@
             },
         },
         mounted() {
-            this.get("/api/spells/" + this.$route.params.name);
+            this.get("lib/api/spells/" + this.$route.params.name);
         }
     }
 </script>

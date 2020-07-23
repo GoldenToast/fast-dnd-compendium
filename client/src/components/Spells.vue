@@ -51,7 +51,7 @@
         },
         methods: {
             get(thing) {
-                return axios.get('api/'+thing)
+                return axios.get(thing)
                     .then(response => {
                         this.totalRows = response.data.count;
                         this.items = response.data.results;
@@ -71,7 +71,7 @@
             }
         },
         mounted() {
-             this.get("/api/spells");
+             this.get("lib/api/spells");
         }
     }
 </script>
