@@ -4,7 +4,7 @@ app.use('/', proxy('www.dnd5eapi.co'));
 const port = process.env.PORT || 3000
 
 if(process.env.NODE_ENV === 'production'){
-    app.use(express.static(__dirname + '/public'))
+    app.use(app.static(__dirname + '/public'))
     app.get(/.*/), (req,res) => res.sendFile(__dirname + '/public/index.html')
 }
 
